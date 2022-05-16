@@ -1,0 +1,333 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="page-wrapper" xmlns="http://www.w3.org/1999/html">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+             <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 d-flex no-block align-items-center">
+                        <h4 class="page-title">Dashboard</h4>
+                        <div class="ml-auto text-right">
+                            <nav aria-label="breadcrumb">
+
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Sales Cards  -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-cyan text-center">
+                                <a href="{% url 'admin_home' %}"><h1 class="font-light text-white"><i class="mdi mdi-home-outline"></i></h1></a>
+                                <a href="{% url 'admin_home' %}"><h6 class="text-white">Home</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-4 col-xlg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-success text-center">
+                                <a href="{% url 'admin_add_courses' %}"><h1 class="font-light text-white"><i class="mdi mdi-book-open-page-variant"></i></h1></a>
+                                <a href="{% url 'admin_add_courses' %}"><h6 class="text-white">Courses</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Column -->
+                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-warning text-center">
+                                <a href="{% url 'admin_about_cse' %}"><h1 class="font-light text-white"><i class="mdi mdi-account-settings"></i></h1></a>
+                                <a href="{% url 'admin_about_cse' %}"><h6 class="text-white">About CSE</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-danger text-center">
+                                <a href="{% url 'admin_previous_papers' %}"><h1 class="font-light text-white"><i class="mdi mdi-book-open"></i></h1></a>
+                                <a href="{% url 'admin_previous_papers' %}"><h6 class="text-white">Previous Papers</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-info text-center">
+                                <a href="{% url 'admin_yojana_book' %}"><h1 class="font-light text-white"><i class="mdi mdi-file-pdf-box"></i></h1></a>
+                                <a href="{% url 'admin_yojana_book' %}"><h6 class="text-white">Yojana</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-4 col-xlg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-danger text-center">
+                                <a href="{% url 'admin_admission_pro' %}"><h1 class="font-light text-white"><i class="mdi mdi-account-multiple-plus"></i></h1></a>
+                                    <a href="{% url 'admin_admission_pro' %}"><h6 class="text-white">Admission Procedure</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-info text-center">
+                                <a href="{% url 'admin_ncert_book' %}"><h1 class="font-light text-white"><i class="mdi mdi-book-open-variant"></i></h1></a>
+                                <a href="{% url 'admin_ncert_book' %}"><h6 class="text-white">NCERT Books</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Column -->
+                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-cyan text-center">
+                                <a href="{% url 'ad_pgsts' %}"><h1 class="font-light text-white"><i class="mdi mdi-pencil"></i></h1></a>
+                                <a href="{% url 'ad_pgsts' %}"><h6 class="text-white">PGSTS</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-success text-center">
+                                <a href="{% url 'ad_mgsts' %}"><h1 class="font-light text-white"><i class="mdi mdi-lead-pencil"></i></h1></a>
+                                <a href="{% url 'ad_mgsts' %}"><h6 class="text-white">MGSTS</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-warning text-center">
+                                <a href="{% url 'admin_contact_us' %}"><h1 class="font-light text-white"><i class="mdi mdi-clipboard-account"></i></h1></a>
+                                <a href="{% url 'admin_contact_us' %}"><h6 class="text-white">Contact Us</h6></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+                <!-- ============================================================== -->
+                <!-- Sales chart -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <div class="elfsight-app-a69f3fe2-7065-4f6f-9952-f2ae9ad7b30c"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- Sales chart -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Recent comment and chats -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- column -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Latest Books</h4>
+                            </div>
+                            <div class="comment-widgets scrollable">
+                                <!-- Comment Row -->
+                                {% for i in buk %}
+                                <div class="d-flex flex-row comment-row m-t-0">
+                                    <div class="p-2"><img src="{{ i.Book_image.url }}" alt="user" width="50" class="rounded-circle"></div>
+                                    <div class="comment-text w-100">
+                                        <h6 class="font-medium">{{ i.book_category }}</h6>
+                                        <span class="m-b-15 d-block">{{ i.Book_name }}</span>
+                                        <div class="comment-footer">
+                                            <span class="text-muted float-right">{{ i.date }}</span>
+                                            <a href="{{ i.Book_pdf.url }}" download="{{ i.Book_pdf.url }}"> <button type="button" class="btn btn-success btn-sm">Download Pdf</button></a>
+                                            <a href="{% url 'book_delete' i.id %}"> <button type="button" class="btn btn-danger btn-sm">Delete</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                <!-- Comment Row -->
+
+
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Latest Previous Year Paper</h4>
+                                <div class="todo-widget scrollable" style="height:450px;">
+                                    <ul class="list-task todo-list list-group m-b-0" data-role="tasklist">
+                                        {% for i in pev %}
+                                        <li class="list-group-item todo-item" data-role="task">
+                                            <div class="custom-control custom-checkbox">
+
+                                                <label  for="customCheck1">
+                                                    <a href="{% url 'admin_previous_papers' %}" ><span class="todo-desc">{{ i.name }}</span><span class="badge badge-pill badge-primary float-right">{{ i.year }}</span></a>
+                                                </label>
+                                            </div>
+                                            <div class="item-date"> {{ i.date }}</div>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title m-b-0">Courses</h4>
+                            </div>
+                            {% for i in cour %}
+                            <ul class="list-style-none">
+                                <li class="d-flex no-block card-body">
+                                    <i class="fa fas fa-book w-30px m-t-5"></i>
+                                    <div>
+                                        <a href="{% url 'ad_course_detail' i.id %}" class="m-b-0 font-medium p-0">{{ i.full_name }}</a>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <div class="tetx-right">
+                                            <span class="text-muted font-16">{{ i.date }}</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!-- column -->
+
+                    <div class="col-lg-6">
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Send Mail </h4>
+                                <div class="chat-box scrollable" style="height:350px;">
+                                    <form class="form-horizontal" method="POST" >
+                                        {% csrf_token %}
+                                <div class="card-body">
+
+                                    <div class="form-group row">
+                                        <label for="fname" class="col-sm-3 text-right control-label col-form-label">Enter Email</label>
+                                        <div class="col-sm-9">
+                                            <input type="email" class="form-control" name="emai" id="fname" placeholder="Enter Mail to send">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Enter Subject</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" name="subj" id="cono1" placeholder="Enter Mail Subject">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="cono1"  class="col-sm-3 text-right control-label col-form-label">Message</label>
+                                        <div class="col-sm-9">
+                                            <textarea class="form-control" name="msg"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-top">
+                                    <div class="card-body">
+                                        <input type="submit"  style="background-color:#000000" class="btn btn-primary" value="Send Mail" >
+                                    </div>
+                                </div>
+                            </form>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- card -->
+
+                        <!-- accoridan part -->
+                        <div class="accordion" id="accordionExample">
+                            {% for i in enqq %}
+                            <div class="card m-b-0">
+                                <div class="card-header" id="headingOne">
+                                  <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="m-r-5 fa fa-envelope" aria-hidden="true"></i>
+                                        <span>Enquiry Form , {{ i.name }}</span>
+                                    </a>
+                                  </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                  <div class="card-body">
+                                    Course - {{ i.Course }}, Email - {{ i.Email }}, Mobile - {{ i.mobile }}
+                                      Message  - {{ i.message }}
+
+                                  </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!-- toggle part -->
+                        <div id="accordian-4">
+
+                            <div class="card m-t-30">
+                                {% for i in cont %}
+                                <a class="card-header link" data-toggle="collapse" data-parent="#accordian-4" href="#Toggle-1" aria-expanded="true" aria-controls="Toggle-1">
+                                    <i class="seticon fa fa-envelope-open" aria-hidden="true"></i>
+                                    <span>Contact Us , {{ i.first_name }} {{ i.last_name }}</span>
+                                </a>
+                                <div id="Toggle-1" class="collapse show multi-collapse">
+                                    <div class="card-body widget-content">
+                                        MOBILE - {{ i.mobile }}
+                                        EMAIL - {{ i.Email }}
+                                        {{ i.message }}
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+                        <!-- Tabs -->
+                        <div class="accordion" id="accordionExample">
+                            {% for i in emettt %}
+                            <div class="card m-b-0">
+                                <div class="card-header" id="headingOne">
+                                  <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="m-r-5 fa as fa-users" aria-hidden="true"></i>
+                                        <span>Meet Our Faculty </span>
+                                    </a>
+                                  </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                  <div class="card-body">
+                                      {{ i.name }}
+                                    Course - {{ i.Course }}, Email - {{ i.Email }}, Mobile - {{ i.mobile }}
+                                      Message  - {{ i.message }}
+
+                                  </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- Recent comment and chats -->
+                <!-- ============================================================== -->
+            </div>
+</div>
+
+{% endblock %}

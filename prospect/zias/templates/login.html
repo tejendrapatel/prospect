@@ -1,0 +1,81 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    
+     {% load static %}
+<title>Prospect IAS | Civil Services coaching Institute with Most Acclaimed faculty network.</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="title" content="Prospect IAS, Civil Services coaching Institute, Delhi, Online Classes.">
+	<meta name="description" content="An institution of committed academicians, CSE experts, and established research scholars are drawn from diverse fields of knowledge.">
+	<meta name="keywords" content="Delhi, UPSC Coaching, Best IAS Institution, Online Classes, Best Faculty, One of a Kind. India's Best IAS Coaching in Delhi is best known for comprehensive UPSC Preparation in Delhi.">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="English">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="{% static 'images/logo.png' %}" type="image/gif" sizes="16x16">
+    <!-- //Meta tag Keywords -->
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!--/Style-CSS -->
+    <link rel="stylesheet" href="{% static 'login/css/style.css' %}" type="text/css" media="all" />
+    <!--//Style-CSS -->
+
+    <link rel="stylesheet" href="{% static 'login/css/font-awesome.min.css' %}" type="text/css" media="all">
+    	<script>
+    (function(d, w, c) {
+        w.ChatraID = 'eS4jWfcWq857x57uv';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+</script>
+</head>
+
+<body>
+
+    <!-- form section start -->
+    <section class="w3l-hotair-form">
+
+        <div class="container">
+            <!-- /form -->
+            <div class="workinghny-form-grid">
+                <div class="main-hotair">
+                    <div class="content-wthree">
+                        <h2>Log In</h2>
+                        {% if error %}
+                        <center><p style="color:red"><br><br>Username Or Password is Incorrect !!</p></center>
+                        {% endif %}
+                        <form action="#" method="POST">
+                            {% csrf_token %}
+                            <input type="text" class="text" name="user" placeholder="User Name" required="" autofocus>
+                            <input type="password" class="password" name="pwd" placeholder="User Password" required="" autofocus>
+                            <button class="btn" type="submit">Log In</button>
+                        </form>
+
+                    </div>
+                    <div class="w3l_form align-self">
+                        <div class="left_grid_info">
+                            <img src="{% static 'login/images/1.png' %}" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //form -->
+        </div>
+
+    </section>
+    <!-- //form section start -->
+</body>
+
+</html>

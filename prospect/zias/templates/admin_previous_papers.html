@@ -1,0 +1,227 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block body %}
+ <div class="page-wrapper">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <form class="form-horizontal" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                                <div class="card-body">
+                                    <h4 class="card-title">Add Previous Year Papers</h4>
+                                    <div class="form-group row">
+
+                                    <label class="col-md-3 m-t-15" ></label>
+                                    <div class="col-md-9">
+                                        <select class="select2 form-control custom-select" name="cat" style="width: 100%; height:36px;">
+                                            <option>Select Paper Category</option>
+                                            <option value="UPSC Prelims Previous Year Question Papers">UPSC Prelims Previous Year Question Papers</option>
+                                            <option value="Essay Previous Year Question Papers">Essay Previous Year Question Papers</option>
+                                            <option value="UPSC Mains General Studies Previous Year Question Papers">UPSC Mains General Studies Previous Year Question Papers</option>
+                                            <option value="UPSC Mains Optional Subjects Previous Year Question Papers">UPSC Mains Optional Subjects Previous Year Question Papers</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                    <div class="form-group row">
+                                        <label for="llname" class="col-sm-3 text-right control-label col-form-label">Year</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" class="form-control" name="year" id="llname" placeholder="Enter Year">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="lname" class="col-sm-3 text-right control-label col-form-label">Title</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" name="title" id="lname" placeholder="Enter Title">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="email11" class="col-sm-3 text-right control-label col-form-label">Paper 1 Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" name="pap1nam" id="email11" placeholder="Paper 1 Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="cono11" class="col-sm-3 text-right control-label col-form-label">Paper 1 PDF</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" class="form-control" name="pap1pdf" id="cono11" placeholder="Upload PDF">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="email1" class="col-sm-3 text-right control-label col-form-label">Paper 2 Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" name="pap2name" id="email1" placeholder="Paper 1 Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Paper 2 PDF</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" class="form-control" name="pap2pdf" id="cono1" placeholder="Upload PDF">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="border-top">
+                                    <div class="card-body">
+                                        <input type="submit" style="background-color:#000000" name="enquirey" class="btn btn-primary" value="Add Previous Year Paper">
+                                    </div>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">UPSC Prelims Previous Year Question Papers</h5>
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Year</th>
+                                                <th>Title</th>
+                                                <th>paper pdf-1</th>
+                                                <th>paper pdf-2</th>
+                                            </tr>
+                                        </thead>
+                                        {% for i in pre %}
+                                        <tbody>
+                                            <tr>
+                                                <td>{{ i.year }}</td>
+                                                <td>{{ i.name }}</td>
+                                                <td><a href="{{ i.paper1_pdf.url }}" download="{{ i.paper1_pdf.url }}">{{ i.paper1_name }}</a></td>
+                                                <td><a href="{{ i.paper2_pdf.url }}" download="{{ i.paper2_pdf.url }}">{{ i.paper2_name }}</a></td>
+                                                <td><a href="{% url 'previous_paper_delete' i.id %}" ><button type="button" class="btn btn-danger btn-sm">Delete</button></a></td>
+                                            </tr>
+                                        </tbody>
+                                        {% endfor %}
+
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Essay Previous Year Question Papers</h5>
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Year</th>
+                                                <th>Title</th>
+                                                <th>paper pdf-1</th>
+                                                <th>paper pdf-2</th>
+                                            </tr>
+                                        </thead>
+                                        {% for i in essay %}
+                                        <tbody>
+                                            <tr>
+                                                <td>{{ i.year }}</td>
+                                                <td>{{ i.name }}</td>
+                                                <td><a href="{{ i.paper1_pdf.url }}" download="{{ i.paper1_pdf.url }}">{{ i.paper1_name }}</a></td>
+                                                <td><a href="{{ i.paper2_pdf.url }}" download="{{ i.paper2_pdf.url }}">{{ i.paper2_name }}</a></td>
+                                                <td><a href="{% url 'previous_paper_delete' i.id %}" ><button type="button" class="btn btn-danger btn-sm">Delete</button></a></td>
+                                            </tr>
+                                        </tbody>
+                                        {% endfor %}
+
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">UPSC Mains General Studies Previous Year Question Papers</h5>
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Year</th>
+                                                <th>Title</th>
+                                                <th>paper pdf-1</th>
+                                                <th>paper pdf-2</th>
+                                            </tr>
+                                        </thead>
+                                        {% for i in gen %}
+                                        <tbody>
+                                            <tr>
+                                                <td>{{ i.year }}</td>
+                                                <td>{{ i.name }}</td>
+                                                <td><a href="{{ i.paper1_pdf.url }}" download="{{ i.paper1_pdf.url }}">{{ i.paper1_name }}</a></td>
+                                                <td><a href="{{ i.paper2_pdf.url }}" download="{{ i.paper2_pdf.url }}">{{ i.paper2_name }}</a></td>
+                                                <td><a href="{% url 'previous_paper_delete' i.id %}" ><button type="button" class="btn btn-danger btn-sm">Delete</button></a></td>
+                                            </tr>
+                                        </tbody>
+                                        {% endfor %}
+
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">UPSC Mains Optional Subjects Previous Year Question Papers</h5>
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Year</th>
+                                                <th>Title</th>
+                                                <th>paper pdf-1</th>
+                                                <th>paper pdf-2</th>
+                                            </tr>
+                                        </thead>
+                                        {% for i in sub %}
+                                        <tbody>
+                                            <tr>
+                                                <td>{{ i.year }}</td>
+                                                <td>{{ i.name }}</td>
+                                                <td><a href="{{ i.paper1_pdf.url }}" download="{{ i.paper1_pdf.url }}">{{ i.paper1_name }}</a></td>
+                                                <td><a href="{{ i.paper2_pdf.url }}" download="{{ i.paper2_pdf.url }}">{{ i.paper2_name }}</a></td>
+                                                <td><a href="{% url 'previous_paper_delete' i.id %}" ><button type="button" class="btn btn-danger btn-sm">Delete</button></a></td>
+                                            </tr>
+                                        </tbody>
+                                        {% endfor %}
+
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

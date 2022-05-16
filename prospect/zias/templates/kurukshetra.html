@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<!-- Start: Page Banner -->
+ <section class="page-banner "style= "background: linear-gradient(rgba(0%,0%,0%, 0.80), rgba(133%,4%,4%, 0.40)), url({% static 'yinside/images/page-banners/111.jpg' %})";>
+    <div class="container">
+        <div class="banner-header">
+            <h2 style="color: #fff;font-size: 50px;font-weight: 600;text-shadow: 2px 2px 5px black">KURUKSHERTA</h2>
+            <span class="underline center"></span>
+            <p class="lead"></p>
+        </div>
+
+    </div>
+</section>
+<!-- End: Page Banner -->
+
+<!-- Start: Products Section -->
+ <div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+            <div class="booksmedia-detail-main">
+                <div class="container">
+                    <div class="row">
+
+                    </div>
+                    <div class="booksmedia-detail-box">
+
+                            <div class="col-xs-12 col-sm-7 col-md-6">
+
+                            </div>
+
+
+                        <div class="clearfix"></div>
+                        {% for i in adm %}
+                        <p>{{ i.content|safe }}</p>
+                        {% endfor %}
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<!-- End: Products Section -->
+
+
+        {% endblock %}

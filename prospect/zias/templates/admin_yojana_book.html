@@ -1,0 +1,127 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block body %}
+ <div class="page-wrapper">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-body">
+
+                               <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <form class="form-horizontal" method="POST" enctype="multipart/form-data" >
+                                {% csrf_token %}
+                                <div class="card-body">
+                                    <h4 class="card-title">Add Yojana Category</h4>
+                                    <div class="form-group row">
+                                        <label for="fdname" class="col-sm-3 text-right control-label col-form-label"> Year</label>
+                                        <div class="col-sm-9">
+                                            <input type="text"  name="nam" class="form-control" id="fdname" placeholder="Year of Yojana ">
+                                        </div>
+                                    </div>
+                                      <div class="form-group row">
+                                        <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Image</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" class="form-control" name="pap2pdf" id="cono1" placeholder="Upload PDF">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-top">
+                                    <div class="card-body">
+                                        <input type="submit" style="background-color:#000000" name="bact" class="btn btn-primary" value="Add Yojana Category">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <form class="form-horizontal" method="POST" enctype="multipart/form-data" >
+                                {% csrf_token %}
+                                <div class="card-body">
+                                    <h4 class="card-title">Add Yojana</h4>
+                                    <div class="form-group row">
+
+                                    <label class="col-md-3 m-t-15" ></label>
+                                    <div class="col-md-9">
+                                        <select class="select2 form-control custom-select" name="cat" style="width: 100%; height:36px;">
+                                            <option>Select Book Category</option>
+                                            {% for i in cat %}
+                                            <option value="{{ i.name }}">{{ i.name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                    <div class="form-group row">
+                                        <label for="lqname" class="col-sm-3 text-right control-label col-form-label">Yojana Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" required name="bname" class="form-control" id="lqname" placeholder="Yojana Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="lname" class="col-sm-3 text-right control-label col-form-label">Yojana Image</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" required name="bimg"  class="form-control" id="lname" placeholder="Password Here">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="email1ww" class="col-sm-3 text-right control-label col-form-label">Yojana PDF</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" required name="bpdf" class="form-control" id="email1ww" placeholder="Company Name Here">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-top">
+                                    <div class="card-body">
+                                        <input type="submit" style="background-color:#000000"  name="book" class="btn btn-primary" value="Add Yojana" >
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                                <h5 class="card-title">Yojana Category</h5>
+                                 <div class="container-fluid">
+                <div class="row el-element-overlay">
+                    {% for i in cat %}
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="el-card-item">
+                                <div class="el-card-avatar el-overlay-1"> <img src="{{ i.category_image.url }}" alt="user" />
+                                    <div class="el-overlay">
+                                        <ul class="list-style-none el-info">
+
+                                            <li class="el-item"><a class="btn default btn-outline el-link" href="{% url 'yojana_cat_detail' i.id %}">View Books <i class="mdi mdi-link"></i></a></li>
+                                            <br><br><br>
+                                            <li class="el-item"><a class="btn default btn-outline el-link" href="{% url 'yojana_cat_delete' i.id %}">Delete Category <i class="mdi mdi-delete"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="el-card-content">
+                                    <h4 class="m-b-0">{{ i.name }}</h4> <span class="text-muted"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   {% endfor %}
+                </div>
+            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

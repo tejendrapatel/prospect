@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+    {% load static %}
+        <!-- Meta -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+
+        <!-- Title -->
+        <title>Prospect IAS | Civil Services coaching Institute with Most Acclaimed faculty network.</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="title" content="Prospect IAS, Civil Services coaching Institute, Delhi, Online Classes.">
+        <meta name="description" content="An institution of committed academicians, CSE experts, and established research scholars are drawn from diverse fields of knowledge.">
+        <meta name="keywords" content="Delhi, UPSC Coaching, Best IAS Institution, Online Classes, Best Faculty, One of a Kind. India's Best IAS Coaching in Delhi is best known for comprehensive UPSC Preparation in Delhi.">
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Favicon -->
+        <link rel="icon" href="{% static 'images/logo.png' %}" type="image/gif" sizes="16x16">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <!-- Fonts -->
+        <link rel="icon" href="{% static 'images/logo.png' %}" type="image/gif" sizes="16x16">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <link href="{% static 'yinside/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+
+        <!-- Mobile Menu -->
+        <link href="{% static 'yinside/css/mmenu.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'yinside/css/mmenu.positioning.css' %}" rel="stylesheet" type="text/css" />
+
+        <!-- Stylesheet -->
+        <link href="{% static 'yinside/css/style.css' %}" rel="stylesheet" type="text/css" />
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="{% static 'yinside/js/html5shiv.min.js' %}"></script>
+        <script src="{% static 'yinside/js/respond.min.js' %}"></script>
+        <![endif]-->
+  <script>
+    (function(d, w, c) {
+        w.ChatraID = 'eS4jWfcWq857x57uv';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+</script>
+
+    </head>
+
+
+    <body>
+
+
+      <div class="wraps"style="background-color:#c20000">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 d-flex align-items-center">
+					<p class="mb-0 phone pl-md-2" style="padding-top: 1em">
+						<a class="" style="font-size: 10px;color:#fff;" href="#">Today's Schedule</a>
+                        <a class="" style="font-size: 10px;margin-left:40px;color:#fff" href="#">Digital Learning</a>
+                        <a class="buttonss" style="font-size: 10px;margin-left:35px;" href="#">Live Webcast</a>
+					</p>
+				</div>
+         {% if request.user.is_authenticated %}
+                <a href="{% url 'Logout' %}" style="color:#fff;font-size:15px;font-weight:500;" class="topicon"><span>Logout</span></a>
+                  {% else %}
+                <a href="{% url 'Login' %}" style="color:#fff;font-size:15px;font-weight:500;" class="topicon"><span>Login</span></a>
+                  {% endif %}
+                <a href="https://www.youtube.com/channel/UC1dKIKL4oBul8dnBt0ZsRvg" class="topicon"><span class="fa fa-youtube"></span></a>
+                <a href="https://www.linkedin.com/company/prospectias/" class="topicon"><span class="fa fa-linkedin"></span></a>
+                <a href="https://twitter.com/prospectias" class="topicon"><span class="fa fa-twitter"></span></a>
+                <a href="https://www.facebook.com/prospectias" class="topicon"><span class="fa fa-facebook"></span></a>
+
+               
+			</div>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"style="position: sticky;top:0px">
+		<div class="container">
+			<img  src="{% static 'images/logo2.png' %}" style="width:18%;" alt="">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu" style="color: #000000" ></span> Menu
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+
+                
+                <div class="dropdown">
+                  <a href="{% url 'home' %}"><button class="dropbtn"style="font-size: 15px;font-weight: 600;">HOME</button></a>
+
+                </div>
+                 <div class="dropdown">
+                  <button class="dropbtn"style="font-size: 15px;font-weight: 600;">ABOUT</button>
+                  <div class="dropdown-content">
+                    <a href="{% url 'about_institution' %}" style="font-size: 15px;font-weight: 600;" >About Prospect</a>
+                    <a href="{% url 'about_cse' %}" style="font-size: 15px;font-weight: 600;">About CSE</a>
+                  </div>
+                </div>
+                   <div class="dropdown">
+                  <button class="dropbtn"style="font-size: 15px;font-weight: 600;">COURSES</button>
+                  <div class="dropdown-content">
+					  {% for i in allcat %}
+					  <a href="{% url 'course_detail' i.id %}" style="font-size: 15px;font-weight: 600;" >{{ i.name }}</a>
+					  {% endfor %}
+
+
+                  </div>
+                </div>
+                   <div class="dropdown">
+                  <button class="dropbtn"style="font-size: 15px;font-weight: 600;z-index:50px">ADMISSION</button>
+                  <div class="dropdown-content">
+                    <a href="{% url 'admission_procedure' %}" style="font-size: 15px;font-weight: 600;" >Admission Procedure</a>
+                    <a href="{% url 'fee_structure' %}" style="font-size: 15px;font-weight: 600;">Fee Structure</a>
+                    <!-- <a href="#" style="font-size: 15px;font-weight: 600;">Forms</a>
+                      <a href="#" style="font-size: 15px;font-weight: 600;">FAQs</a> -->
+                  </div>
+                </div>
+                    <div class="dropdown">
+                  <button class="dropbtn"style="font-size: 15px;font-weight: 600;">RESOURCES</button>
+                  <div class="dropdown-content">
+                    <a href="{% url 'syllabus' %}" style="font-size: 15px;font-weight: 600;" >Syllabus</a>
+                    <a href="{% url 'ncrt_books' %}" style="font-size: 15px;font-weight: 600;">NCERT Books</a>
+                    <a href="{% url 'yojana' %}" style="font-size: 15px;font-weight: 600;">Yojana</a>
+                    <a href="{% url 'kurukshetra' %}" style="font-size: 15px;font-weight: 600;">Kurukshetra</a>
+                    <a href="{% url 'suggested_readings' %}" style="font-size: 15px;font-weight: 600;">Suggested Readings</a>
+                      <a href="{% url 'previous_papers' %}" style="font-size: 15px;font-weight: 600;">Previous Papers</a>
+                      <a href="{% url 'prospect_book' %}" style="font-size: 15px;font-weight: 600;">Prospect Books</a>
+                      <a href="{% url 'prospect_planner' %}" style="font-size: 15px;font-weight: 600;">Prospect Planner</a>
+                  </div>
+                </div>
+                 <div class="dropdown">
+                  <button class="dropbtn"style="font-size: 15px;font-weight: 600;">TEST SERIES</button>
+                  <div class="dropdown-content">
+                    <a href="{% url 'pgsts' %}" style="font-size: 15px;font-weight: 600;" >PGSTS</a>
+                    <a href="{% url 'mgsts' %}" style="font-size: 15px;font-weight: 600;">MGSTS</a>
+                  </div>
+                </div>
+				 <div class="dropdown">
+					<button class="dropbtn"style="font-size: 15px;font-weight: 600;">CURRENT AFFAIRS</button>
+					<div class="dropdown-content">
+					  <a href="{% url 'mcqs' %}" style="font-size: 15px;font-weight: 600;" >MCQS</a>
+					  <a href="{% url 'air_news' %}" style="font-size: 15px;font-weight: 600;">AIR News</a>
+					  <a href="{% url 'pib' %}" style="font-size: 15px;font-weight: 600;">PIB</a>
+					  <a href="{% url 'daily_editorial' %}" style="font-size: 15px;font-weight: 600;">Daily Editorial</a>
+					  <a href="{% url 'news_clippings' %}" style="font-size: 15px;font-weight: 600;">News Clippings</a>
+					  <a href="{% url 'prospect_articles' %}" style="font-size: 15px;font-weight: 600;">Prospect Articles</a>
+					  <a href="{% url 'prospect_magazine' %}" style="font-size: 15px;font-weight: 600;">Prospect Magazines</a>
+					  <a href="{% url 'info_graphics' %}" style="font-size: 15px;font-weight: 600;">InfoGrapics</a>
+					  <a href="{% url 'rstv_debates' %}" style="font-size: 15px;font-weight: 600;">RSTV Debates</a>
+					</div>
+				  </div>
+				  <div class="dropdown">
+					<a href="{% url 'contact' %}"><button class="dropbtn"style="font-size: 15px;font-weight: 600;">CONTACT</button></a>
+
+				  </div>
+             {% if request.user.is_authenticated %}
+              <div class="dropdown">
+          <a href="{% url 'admin_index' %}"><button class="dropbtn"style="font-size: 14px;font-weight: 600;">ADMIN</button></a>
+          </div>
+              {% else %}
+
+              {% endif %}
+
+				
+			</div>
+		</div>
+	</nav>
+	<!-- END nav -->
+
+       
+    {% block body %}
+    {% endblock %}
+
+<!-- Start: Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div id="footer-widgets">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 widget-container">
+                            <div id="text-2" class="widget widget_text">
+                                <h3 class="footer-widget-title">About Prospect IAS</h3>
+                                <span class="underline left"></span>
+
+                                <div class="textwidget">
+                                    We believe in creative and innovative pedagogies of teaching-learning processes.
+                                </div>
+                                <address>
+                                    <div class="info">
+                                        <i class="fa fa-location-arrow"style="color: #fff;"></i>
+                                        <span>B-18, 1st Floor ,Opp.Aggrawal Sweets
+                                            Mukherjee Nagar , Delhi 110009</span>
+                                    </div>
+                                    <div class="info">
+                                        <i class="fa fa-envelope"style="color: #fff;"></i>
+                                        <span><a href="">enquiry@prospectias.in</a></span>
+                                    </div>
+                                    <div class="info">
+                                        <i class="fa fa-phone" style="color: #fff;"></i>
+                                        <span><a href="">+91 9821 9821 04 , 9821 9821 07</a></span>
+                                    </div>
+                                </address>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6 widget-container">
+                            <div id="nav_menu-2" class="widget widget_nav_menu">
+                                <h3 class="footer-widget-title">Quick Links</h3>
+                                <span class="underline left"></span>
+                                <div class="menu-quick-links-container">
+                                    <ul id="menu-quick-links" class="menu">
+                                        <div class="dropdown">
+                                          <a href="{% url 'home' %}"><button class="dropbtn"style="font-size: 15px;font-weight: 500;color:#fff;line-height: 1.2;">HOME</button></a>
+
+                                        </div>
+
+                                         <div class="dropdown">
+                                          <button class="dropbtn"style="font-size: 15px;font-weight: 500;color:#fff;line-height: 2.8;">COURSES</button>
+                                          <div class="dropdown-content">
+                                              {% for i in allcat %}
+                                              <a href="{% url 'course_detail' i.id %}" style="font-size: 15px;font-weight: 600;" >{{ i.name }}</a>
+                                              {% endfor %}
+                                          </div>
+                                        </div>
+                                          <div class="dropdown">
+                                          <button class="dropbtn"style="font-size: 15px;font-weight: 500;color:#fff">ABOUT</button>
+                                          <div class="dropdown-content">
+                                            <a href="{% url 'about_institution' %}" style="font-size: 15px;font-weight: 600;" >About Prospect</a>
+                                            <a href="{% url 'about_cse' %}" style="font-size: 15px;font-weight: 600;">About CSE</a>
+                                          </div>
+                                        </div>
+                                         <div class="dropdown">
+                                          <a href="{% url 'contact' %}"><button class="dropbtn"style="font-size: 15px;font-weight: 500;color:#fff">CONTACT</button></a>
+
+                                        </div>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix hidden-lg hidden-md hidden-xs tablet-margin-bottom"></div>
+                        <div class="col-md-2 col-sm-6 widget-container">
+                            <div id="text-4" class="widget widget_text">
+                                <h3 class="footer-widget-title"></h3>
+                                <span class="underline left"></span>
+                                <!-- <div class="timming-text-widget">
+                                    <time datetime="2017-02-13">Mon - Thu: 9 am - 9 pm</time>
+                                    <time datetime="2017-02-13">Fri: 9 am - 6 pm</time>
+                                    <time datetime="2017-02-13">Sat: 9 am - 5 pm</time>
+                                    <time datetime="2017-02-13">Sun: 1 pm - 6 pm</time>
+                                    <ul>
+                                        <li><a href="#">Closings</a></li>
+                                        <li><a href="#">Branches</a></li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 widget-container">
+                            <div class="widget twitter-widget">
+                                <img  src="{% static 'images/logow.png' %}" style="width:90%;" alt="">
+                                <span class="underline left"></span>
+                                   <ul class="ftco-footer-social p-0" style="margin-left:30px" >
+                                    <li  class="ftco-animate" ><a href="#" data-toggle="https://twitter.com/prospectias" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span></a></li>
+                                    <li class="ftco-animate"><a href="https://www.facebook.com/prospectias" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
+                                    <li class="ftco-animate"><a href="https://www.youtube.com/channel/UC1dKIKL4oBul8dnBt0ZsRvg" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-youtube"></span></a></li>
+                                     <li class="ftco-animate"><a href="https://www.linkedin.com/company/prospectias/" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-linkedin "></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+				<div class="col-md-12 text-center">
+
+					<p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script>  PROSPECT IAS ALL RIGHTS RESERVED <i class="fa fa-book" aria-hidden="true"></i> 
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+					</div>
+				</div>
+			</div>
+        </footer>
+        <!-- End: Footer -->
+
+        <!-- jQuery Latest Version 1.x -->
+        <script type="text/javascript" src="{% static 'yinside/js/jquery-1.12.4.min.js' %}"></script>
+
+        <!-- jQuery UI -->
+        <script type="text/javascript" src="{% static 'yinside/js/jquery-ui.min.js' %}"></script>
+
+        <!-- jQuery Easing -->
+        <script type="text/javascript" src="{% static 'yinside/js/jquery.easing.1.3.js' %}"></script>
+
+        <!-- Bootstrap -->
+        <script type="text/javascript" src="{% static 'yinside/js/bootstrap.min.js' %}"></script>
+
+        <!-- Mobile Menu -->
+        <script type="text/javascript" src="{% static 'yinside/js/mmenu.min.js' %}"></script>
+
+        <!-- Harvey - State manager for media queries -->
+        <script type="text/javascript" src="{% static 'yinside/js/harvey.min.js' %}"></script>
+
+        <!-- Waypoints - Load Elements on View -->
+        <script type="text/javascript" src="{% static 'yinside/js/waypoints.min.js' %}"></script>
+
+        <!-- Facts Counter -->
+        <script type="text/javascript" src="{% static 'yinside/js/facts.counter.min.js' %}"></script>
+
+        <!-- MixItUp - Category Filter -->
+        <script type="text/javascript" src="{% static 'yinside/js/mixitup.min.js' %}"></script>
+
+        <!-- Owl Carousel -->
+        <script type="text/javascript" src="{% static 'yinside/js/owl.carousel.min.js' %}"></script>
+
+        <!-- Accordion -->
+        <script type="text/javascript" src="{% static 'yinside/js/accordion.min.js' %}"></script>
+
+        <!-- Responsive Tabs -->
+        <script type="text/javascript" src="{% static 'yinside/js/responsive.tabs.min.js' %}"></script>
+
+        <!-- Responsive Table -->
+        <script type="text/javascript" src="{% static 'yinside/js/responsive.table.min.js' %}"></script>
+
+        <!-- Masonry -->
+        <script type="text/javascript" src="{% static 'yinside/js/masonry.min.js' %}"></script>
+
+        <!-- Carousel Swipe -->
+        <script type="text/javascript" src="{% static 'yinside/js/carousel.swipe.min.js' %}"></script>
+
+        <!-- bxSlider -->
+        <script type="text/javascript" src="{% static 'yinside/js/bxslider.min.js' %}"></script>
+
+        <!-- Google Map API -->
+        <script type="text/javascript"  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d224059.8222462966!2d77.1032810959771!3d28.66167315763666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1615782974167!5m2!1sen!2sin" width="680" height="530" style="border:0;" allowfullscreen="" loading="lazy"></script>
+
+        <!-- Google Map (Custom Style) -->
+        <script type="text/javascript" src="{% static 'yinside/js/google.map.js' %}"></script>
+
+        <!-- Custom Scripts -->
+        <script type="text/javascript" src="{% static 'yinside/js/main.js' %}"></script>
+
+    </body>
+
+
+</html>

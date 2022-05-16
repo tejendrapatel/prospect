@@ -1,0 +1,46 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block body %}
+ <div class="page-wrapper">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Fee Structure(GENERAL STUDIES: DIFFERENT COURSE MODULES )</h5>
+                               <form method="POST">
+                                    {% csrf_token %}
+                                        <div >
+                                          <textarea style="height:800px;" name="txt" id="mytextarea">{{ pre.content|safe }}</textarea>
+                                        </div>
+                                    <br><br>
+                                    <div class="border-top">
+                                    <div class="card-body">
+                                        <input type="submit" style="background-color:#000000" class="btn btn-primary" value="UPDATE">
+                                    </div>
+                                </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

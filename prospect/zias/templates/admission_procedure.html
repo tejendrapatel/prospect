@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+ <!-- Start: Page Banner -->
+ <section class="page-banner "style= "background: linear-gradient(rgba(0%,0%,0%, 0.80), rgba(133%,4%,4%, 0.40)), url({% static 'yinside/images/page-banners/111.jpg' %})";>
+    <div class="container">
+        <div class="banner-header">
+            <h2 style="color: #fff;font-size: 50px;font-weight: 600;text-shadow: 2px 2px 5px black">ADMISSION PROCEDURE</h2>
+            <span class="underline center"></span>
+            <p class="lead"></p>
+        </div>
+
+    </div>
+</section>
+<!-- End: Page Banner -->
+       
+
+ <!-- Start: Products Section -->
+ <div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+            <div class="booksmedia-detail-main">
+                <div class="container">
+                    <div class="row">
+                        
+                    </div>
+                    <div class="booksmedia-detail-box">
+                       
+                            <div class="col-xs-12 col-sm-7 col-md-6">
+                               
+                            </div>
+                            
+                            
+                        <div class="clearfix"></div>
+                        {% for i in adm %}
+                        <p>{{ i.content|safe }}</p>
+                        {% endfor %}
+                </div>
+                <a href="https://forms.gle/AphdNAfRhjCsgKKT8" style="background-color:#000000" class="btn btn-info" role="button" target="_blank">ENROLL NOW</a>
+            </div>
+        </main>
+    </div>
+</div>
+<!-- End: Products Section -->
+       <!-- Start: Contact Us Section -->
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+                    <div class="contact-main">
+                        <div class="contact-us">
+                            <div class="container">
+                                <div class="contact-location">
+                                    <div class="flipcard">
+                                        <div class="front">
+                                            <div class="top-info">
+                                                <span><i class="fa fa-map-marker" aria-hidden="true"></i> Office Address</span>
+                                            </div>
+                                            <div class="bottom-info">
+                                                <span class="top-arrow"></span>
+                                                <ul>
+                                                    <li>B-18, 1st Floor </li>
+                                                    <li>Opp.Aggrawal Sweets</li>
+                                                    <li>Mukherjee Nagar , Delhi 110009</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="bottom-info orange-bg">
+                                                <span class="bottom-arrow"></span>
+                                                <ul>
+                                                    <li>B-18, 1st Floor </li>
+                                                    <li>Opp.Aggrawal Sweets</li>
+                                                    <li>Mukherjee Nagar , Delhi 110009</li>
+                                                </ul>
+                                            </div>
+                                            <div class="top-info dark-bg">
+                                                <span><i class="fa fa-map-marker" aria-hidden="true"></i> Office Address</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flipcard">
+                                        <div class="front">
+                                            <div class="top-info">
+                                                <span><i class="fa fa-fax" aria-hidden="true"></i> Mobile </span>
+                                            </div>
+                                            <div class="bottom-info">
+                                                <span class="top-arrow"></span>
+                                                <ul>
+                                                    <li><a href="">Mobile :+91 9821 9821 04</a></li>
+                                                    <li><a href="">Mobile :+91 9821 9821 07</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="bottom-info orange-bg">
+                                                <span class="bottom-arrow"></span>
+                                                <ul>
+                                                    <li><a href="">Mobile :+91 9821 9821 04</a></li>
+                                                    <li><a href="">Mobile :+91 9821 9821 07</a></li>
+
+                                                </ul>
+                                            </div>
+                                            <div class="top-info dark-bg">
+                                                <span><i class="fa fa-fax" aria-hidden="true"></i> Mobile </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flipcard">
+                                        <div class="front">
+                                            <div class="top-info">
+                                                <span><i class="fa fa-envelope" aria-hidden="true"></i> Email Address</span>
+                                            </div>
+                                            <div class="bottom-info">
+                                                <span class="top-arrow"></span>
+                                                <ul>
+                                                    <li>enquiry@prospectias.in</li>
+                                                    <li>info@prospectias.in</li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="bottom-info orange-bg">
+                                                <span class="bottom-arrow"></span>
+                                                <ul>
+                                                    <li>enquiry@prospectias.in</li>
+                                                    <li>info@prospectias.in</li>
+                                                </ul>
+                                            </div>
+                                            <div class="top-info dark-bg">
+                                                <span><i class="fa fa-envelope" aria-hidden="true"></i> Email Address</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!-- End: Contact Us Section -->
+
+
+        {% endblock %}

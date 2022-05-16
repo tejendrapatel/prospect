@@ -1,0 +1,53 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block body %}
+ <div class="page-wrapper">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Upload Image For Url</h5>
+                               <form method="post" enctype="multipart/form-data" >
+                                    {% csrf_token %}
+                                    <div>
+                                      <input type="file"  name="imgsd"><br><br>
+                                    </div>
+                                   <br>
+                                        <input name="enquirey" type="submit" style="background-color:#000000" class="btn btn-primary" value="Submit">
+
+                                </form>
+                                 <div class="container-fluid">
+                <div class="row el-element-overlay">
+                    {% for i in pg %}
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="el-card-item">
+                                <div class="el-card-avatar el-overlay-1"> <img src="{{ i.image.url }}"  style="width:200px;height:200px" />
+                                    <div class="el-overlay">
+                                        <ul class="list-style-none el-info">
+                                            <li class="el-item"><a class="btn default btn-outline image-popup-vertical-fit el-link" href="{{ i.image.url }}"><i class="mdi mdi-magnify-plus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   {% endfor %}
+                </div>
+            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
